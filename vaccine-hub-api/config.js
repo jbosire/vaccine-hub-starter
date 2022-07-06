@@ -14,6 +14,8 @@ function getDatabaseUri(){
      
 }
 
+const BCRYPT_WORK_FACTOR = 13
+
 console.log("Vaccine hub config:".green)
 console.log("Port:".blue, PORT)
 console.log("Database URI:".blue,  getDatabaseUri())
@@ -22,5 +24,6 @@ console.log("------")
 
 module.exports = {
     PORT,
+    BCRYPT_WORK_FACTOR,
     getDatabaseUri,  
 }
