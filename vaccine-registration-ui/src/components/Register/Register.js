@@ -51,6 +51,7 @@ export default function Signup({ setAppState }) {
 
     setForm((f) => ({ ...f, [event.target.name]: event.target.value }))
   }
+  
 
   const handleOnSubmit = async () => {
     setIsLoading(true)
@@ -63,6 +64,8 @@ export default function Signup({ setAppState }) {
     } else {
       setErrors((e) => ({ ...e, passwordConfirm: null }))
     }
+
+    console.log(form.date)
 
     try {
       const res = await axios.post("http://localhost:3001/auth/register", {
